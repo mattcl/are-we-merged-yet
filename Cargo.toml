@@ -1,0 +1,18 @@
+[package]
+name = "are-we-merged-yet"
+version = "0.1.0"
+authors = ["Matt Chun-Lum <matt@questionable.engineering"]
+
+[[bin]]
+bench = false
+path = "src/main.rs"
+name = "awmy"
+
+[profile.release]
+lto = true
+
+[dependencies]
+clap = { version = "2.20.0", features = ["yaml"] }
+error-chain = "0.7.2"
+git2 = "0.6.3"
+prettytable-rs = "0.6.6"

@@ -1,0 +1,28 @@
+name: are-we-merged-yet
+about: |
+
+  Track latest commits to git branches.
+  See if a particular revision has made it into a branch.
+
+  By default this will check all local branches, but you can place a .awmy file
+  at the root of the git repo that contains branches to check (one per line).
+
+  You may also specify branches via (multiple) uses of -b
+
+settings:
+  - SubcommandRequiredElseHelp
+
+global_settings:
+  - ColoredHelp
+
+subcommands:
+  - rev:
+      about: Check branches for the target revision
+      args:
+        - revision:
+            help: the revision
+            index: 1
+            required: true
+
+  - heads:
+      about: show the head of each branch with commit times
