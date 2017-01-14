@@ -15,6 +15,15 @@ settings:
 global_settings:
   - ColoredHelp
 
+args:
+  - branch:
+      help: A branch to include (may be specified multiple times)
+      long: branch
+      short: b
+      multiple: true
+      takes_value: true
+      global: true
+
 subcommands:
   - rev:
       about: Check branches for the target revision

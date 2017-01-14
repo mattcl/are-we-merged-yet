@@ -43,6 +43,10 @@ pub fn branches_from_file(path: &PathBuf) -> Result<Vec<String>> {
     Ok(res)
 }
 
+pub fn branches_from_repo(repo: &Repository) -> Result<Vec<String>> {
+
+}
+
 pub fn check_branches(repo: &Repository) -> Result<Vec<String>> {
     let mut branch_file_path = repo_root(repo)?;
     branch_file_path.push(".awmy");
